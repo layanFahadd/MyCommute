@@ -19,4 +19,4 @@ A web-based application designed to help users organize and manage daily transpo
 
 ## Project Status
 
-Academic project developed as part of university coursework.
+  web application developed to simplify and organize daily transportation through an intuitive and user-friendly experience.
