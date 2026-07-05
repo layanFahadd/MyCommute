@@ -1,0 +1,966 @@
+/* ==========================================================
+                    MyCommute Final Theme
+   ========================================================== */
+
+/* ==========================================================
+                        COLOR SYSTEM
+   ========================================================== */
+
+:root{
+
+    --primary:#2563EB;
+    --primary-dark:#1E3A8A;
+    --primary-light:#DBEAFE;
+
+    --background:#F5F9FF;
+    --white:#FFFFFF;
+
+    --text:#1F2937;
+    --text-light:#6B7280;
+
+    --border:#DCE8FF;
+
+    --success:#22C55E;
+    --success-bg:#DCFCE7;
+
+    --danger:#EF4444;
+    --danger-bg:#FEE2E2;
+
+    --warning:#F59E0B;
+    --warning-bg:#FEF3C7;
+
+    --radius:14px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    --transition:.30s ease;
+
+}
+
+/* ==========================================================
+                        RESET
+   ========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+                        LINKS
+   ========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+/* ==========================================================
+                        IMAGES
+   ========================================================== */
+
+img{
+
+    max-width:100%;
+
+}
+
+/* ==========================================================
+                        CONTAINER
+   ========================================================== */
+
+.container{
+
+    width:92%;
+
+    max-width:1150px;
+
+    margin:40px auto;
+
+}
+
+.page-content{
+
+    min-height:calc(100vh - 230px);
+
+}
+
+.register-container{
+
+    width:92%;
+
+    max-width:520px;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    background:var(--white);
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================================
+                        TITLES
+   ========================================================== */
+
+h1{
+
+    font-size:46px;
+
+    color:var(--primary-dark);
+
+    margin-bottom:18px;
+
+}
+
+h2{
+
+    font-size:34px;
+
+    color:var(--primary-dark);
+
+    margin-bottom:22px;
+
+}
+
+h3{
+
+    color:var(--primary-dark);
+
+    margin-bottom:16px;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+                        NAVBAR
+   ========================================================== */
+
+.navbar{
+
+    width:100%;
+
+    height:75px;
+
+    background:var(--white);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
+
+    box-shadow:
+
+    0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.logo a{
+
+    color:var(--primary-dark);
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:var(--text);
+
+    font-weight:600;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.logout-form,
+.inline-form{
+
+    width:auto;
+
+    margin:0;
+
+}
+
+.nav-link-button{
+
+    padding:0;
+
+    border:0;
+
+    border-radius:0;
+
+    background:transparent;
+
+    color:var(--text);
+
+    box-shadow:none;
+
+    font:inherit;
+
+    font-weight:600;
+
+}
+
+.nav-link-button:hover{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    transform:none;
+
+}
+
+/* ==========================================================
+                        HERO
+   ========================================================== */
+
+.hero{
+
+    min-height:82vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    text-align:center;
+
+}
+
+.hero p{
+
+    margin:15px 0 35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================================
+                        CARD
+   ========================================================== */
+
+.card{
+
+    background:var(--white);
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+/* ==========================================================
+                        FORMS
+   ========================================================== */
+
+form{
+
+    width:100%;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:13px 16px;
+
+    margin-bottom:22px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:var(--white);
+
+    font-size:15px;
+
+    transition:var(--transition);
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:
+    0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+a:focus-visible,
+button:focus-visible{
+
+    outline:3px solid rgba(37,99,235,.35);
+
+    outline-offset:3px;
+
+}
+
+/* ==========================================================
+                        BUTTONS
+   ========================================================== */
+
+.btn-primary,
+.btn-secondary,
+button{
+
+    display:inline-block;
+
+    padding:13px 26px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary,
+button{
+
+    background:var(--primary);
+
+    color:white;
+
+    box-shadow:
+
+    0 8px 20px rgba(37,99,235,.25);
+
+}
+
+.btn-primary:hover,
+button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================================
+                        TABLE
+   ========================================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:separate;
+
+    border-spacing:0;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    margin-top:20px;
+
+}
+
+thead{
+
+    background:var(--primary-dark);
+
+}
+
+table th{
+
+    color:white;
+
+    padding:18px;
+
+    font-size:15px;
+
+}
+
+table td{
+
+    text-align:center;
+
+    padding:16px;
+
+    border-bottom:
+
+    1px solid #EEF2FF;
+
+}
+
+table tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+table tr:nth-child(even){
+
+    background:#F8FBFF;
+
+}
+
+table tr:hover{
+
+    background:#EEF5FF;
+
+}
+
+/* ==========================================================
+                        STATUS
+   ========================================================== */
+
+.available{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.booked{
+
+    color:var(--success);
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+                        ALERT
+   ========================================================== */
+
+.alert{
+
+    width:92%;
+
+    max-width:1150px;
+
+    margin:20px auto;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    animation:fadeOut 4s forwards;
+
+}
+
+.success{
+
+    background:var(--success-bg);
+
+    color:#166534;
+
+    border-left:
+
+    6px solid var(--success);
+
+}
+
+.error{
+
+    background:var(--danger-bg);
+
+    color:#991B1B;
+
+    border-left:
+
+    6px solid var(--danger);
+
+}
+
+/* ==========================================================
+                        BACK BUTTON
+   ========================================================== */
+
+.back-button{
+
+    margin:25px 0;
+
+}
+
+/* ==========================================================
+                        EMPTY STATE
+   ========================================================== */
+
+.empty-state{
+
+    background:white;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.empty-state h3{
+
+    margin-bottom:12px;
+
+}
+
+.empty-state p{
+
+    color:var(--text-light);
+
+}
+/* ==========================================================
+                        FOOTER
+   ========================================================== */
+
+.footer{
+
+    margin-top:60px;
+
+    background:var(--primary-dark);
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:15px;
+
+}
+
+.footer p{
+
+    color:white;
+
+}
+
+.inline-form input{
+
+    margin:0;
+
+}
+
+.inline-form button{
+
+    white-space:nowrap;
+
+}
+
+/* ==========================================================
+                    BADGES
+   ========================================================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.badge-success{
+
+    background:var(--success-bg);
+
+    color:#166534;
+
+}
+
+.badge-primary{
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+}
+
+.badge-danger{
+
+    background:var(--danger-bg);
+
+    color:#991B1B;
+
+}
+
+/* ==========================================================
+                    CARD HOVER
+   ========================================================== */
+
+.card{
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================================
+                    TABLE ANIMATION
+   ========================================================== */
+
+table{
+
+    animation:fadeIn .5s ease;
+
+}
+
+/* ==========================================================
+                    BUTTON ANIMATION
+   ========================================================== */
+
+.btn-primary:active,
+.btn-secondary:active,
+button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================================
+                    ALERT ANIMATION
+   ========================================================== */
+
+@keyframes fadeOut{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                    SCROLLBAR
+   ========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EDF4FF;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================================
+                    RESPONSIVE
+   ========================================================== */
+
+@media (max-width:900px){
+
+    .navbar{
+
+        padding:18px 30px;
+
+    }
+
+    .container{
+
+        width:95%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+
+        height:auto;
+
+        flex-direction:column;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        margin-top:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        padding:40px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    table{
+
+        display:block;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    button{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        scroll-behavior:auto !important;
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+    }
+
+}
+
+.nav-link-button{
+
+    width:auto;
+
+}
+
+/* ==========================================================
+                    END OF FILE
+                    MyCommute Final Theme
+   ========================================================== */
